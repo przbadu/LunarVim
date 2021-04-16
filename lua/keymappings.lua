@@ -68,3 +68,12 @@ vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
 -- map <leader>n <Plug>(miniyank-cycle)
 -- map <leader>N <Plug>(miniyank-cycleback)
 -- ]])
+
+-- Test keymappings
+vim.cmd([[
+  nmap <silent> t<C-n> :TestNearest<cr>
+  nmap <silent> t<C-f> :TestFile<cr>
+  nmap <silent> t<C-s> :TestSuite<cr>
+  nmap <silent> t<C-l> :TestLast<cr>
+  nmap <silent> t<C-g> :TestVisit<cr>
+]])

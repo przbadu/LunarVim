@@ -80,6 +80,15 @@ return require("packer").startup(
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
 
+		-- Ruby on Rails
+		use {'vim-ruby/vim-ruby', opt = true}
+		use {'tpope/vim-bundler', opt = true}
+		use {'tpope/vim-rails', opt = true}
+		use {'tpope/vim-rake', opt = true}
+		use {'tpope/vim-surround', opt = true} -- will be gone after it is natively supported
+		use {'janko-m/vim-test', opt = true}
+		use {'preservim/vimux', opt = true}
+
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
@@ -102,5 +111,12 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
+        require_plugin("vim-ruby")
+        require_plugin("vim-bundler")
+        require_plugin("vim-rails")
+        require_plugin("vim-rake")
+        require_plugin("vim-surround")
+        require_plugin("vim-test")
+        require_plugin("vimux")
     end
 )
