@@ -1,2 +1,2 @@
 -- make test commands execute using neovim terminal
-let test#strategy = 'neovim'
+-- vim.cmd('let test#strategy = vimux')

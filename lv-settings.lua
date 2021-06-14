@@ -50,3 +50,7 @@ O.tsserver.autoformat = true
 O.json.autoformat = true
 
 -- create custom autocommand field (This would be easy with lua)
+
+-- vim-test
+vim.cmd('let test#strategy = \'vimux\'')
+vim.cmd('let g:ruby_host_prog = \'~/.rbenv/shims/neovim-ruby-host\'')

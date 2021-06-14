@@ -80,14 +80,21 @@ return require("packer").startup(
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
 
-		-- Ruby on Rails
-		use {'vim-ruby/vim-ruby', opt = true}
-		use {'tpope/vim-bundler', opt = true}
-		use {'tpope/vim-rails', opt = true}
-		use {'tpope/vim-rake', opt = true}
-		use {'tpope/vim-surround', opt = true} -- will be gone after it is natively supported
-		use {'janko-m/vim-test', opt = true}
-		use {'preservim/vimux', opt = true}
+				-- Ruby on Rails
+				use {'vim-ruby/vim-ruby', opt = true}
+				use {'tpope/vim-bundler', opt = true}
+				use {'tpope/vim-rails', opt = true}
+				use {'tpope/vim-rake', opt = true}
+				use {'tpope/vim-surround', opt = true} -- will be gone after it is natively supported
+				use {'janko-m/vim-test', opt = true}
+				use {'preservim/vimux', opt = true}
+				use { 'tpope/vim-dispatch', opt = true }
+				use { 'kchmck/vim-coffee-script', opt = true }
+				use { 'airblade/vim-localorie', opt = true }
+				use { 'stefanoverna/vim-i18n', opt = true }
+
+				-- git	
+				use { 'tpope/vim-fugitive', opt = true }
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -117,6 +124,11 @@ return require("packer").startup(
         require_plugin("vim-rake")
         require_plugin("vim-surround")
         require_plugin("vim-test")
+        require_plugin("vim-dispatch")
         require_plugin("vimux")
+        require_plugin("vim-coffee-script")
+				require_plugin('vim-fugitive')
+				-- require_plugin('vim-localorie')
+				-- require_plugin('vim-i18n')
     end
 )

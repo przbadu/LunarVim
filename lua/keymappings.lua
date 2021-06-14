@@ -71,9 +71,19 @@ vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
 
 -- Test keymappings
 vim.cmd([[
-  nmap <silent> t<C-n> :TestNearest<cr>
-  nmap <silent> t<C-f> :TestFile<cr>
-  nmap <silent> t<C-s> :TestSuite<cr>
-  nmap <silent> t<C-l> :TestLast<cr>
-  nmap <silent> t<C-g> :TestVisit<cr>
+  nmap <silent> <leader>tt :TestNearest<cr>
+  nmap <silent> <leader>tf :TestFile<cr>
+  nmap <silent> <leader>ts :TestSuite<cr>
+  nmap <silent> <leader>tl :TestLast<cr>
+  nmap <silent> <leader>tv :TestVisit<cr>
+]])
+
+-- Fugitive
+vim.cmd([[
+	nmap <leader>gj :diffget //2<CR>
+	nmap <leader>gk :diffget //3<CR>
+]])
+
+vim.cmd([[
+	nmap <leader>tt :call VimuxRunCommand("bin/rake test TEST=\"" . bufname("%") . "\"")<cr>
 ]])
