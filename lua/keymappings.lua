@@ -85,5 +85,5 @@ vim.cmd([[
 ]])
 
 vim.cmd([[
-	nmap <leader>tt :call VimuxRunCommand("bin/rake test TEST=\"" . bufname("%") . "\"")<cr>
+	nmap <leader>tt :call VimuxRunCommand("clear; echo -e 'bin/rake test TEST=" . bufname("%") . "'; bin/rake test TEST=\"" . bufname("%") . "\"")<cr>
 ]])
